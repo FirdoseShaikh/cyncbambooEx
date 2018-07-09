@@ -3,14 +3,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class democlass {
 	public static String driverPath = "D:/Software/chromedriver_win32/";
 	 public static WebDriver driver = null;
-	public static void main(String[] args) throws InterruptedException {
+		//public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
-	
+	@Test 
+	public void first() throws InterruptedException
+	{
 		 System.out.println("launching chrome browser");
 		 Thread.sleep(3000);
 			System.setProperty("webdriver.chrome.driver", driverPath+"chromedriver.exe");
