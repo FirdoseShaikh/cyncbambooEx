@@ -1,0 +1,9 @@
+com\cync\pages\LoginPage.class
+com\cync\pages\CyncHomePage.class
+com\cync\CashAppPages\BatchCashPage.class
+com\cync\base\CyncHeaderPage.class
+com\cync\CashAppPages\CheckRegisterPage.class
+com\cync\base\BasePage.class
+com\cync\CashAppPages\CashReceiptHistoryPage.class
+com\cync\pages\CommentTypesPage.class
+com\cync\CashAppPages\BatchProcessPage.class

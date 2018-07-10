@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Parallel Test]" parallel="classes">
+  <parameter name="selGrid" value="false"/>
+  <parameter name="browserName" value="chrome"/>
+  <parameter name="nodeURL" value="false"/>
+  <parameter name="url" value="https://www.google.com/"/>
+  <parameter name="localBrowserPath" value="chromedriver.exe"/>
+  <listeners>
+    <listener class-name="com.cync.base.RetryListener"/>
+  </listeners>
+  <test name="Cync Test Suite">
+    <parameter name="selGrid" value="false"/>
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="nodeURL" value="false"/>
+    <parameter name="url" value="https://www.google.com/"/>
+    <parameter name="localBrowserPath" value="chromedriver.exe"/>
+    <classes>
+      <class name="com.cync.AdminTS.Googletestcases">
+        <methods>
+          <include name="navigateToGoogleTextBox"/>
+          <include name="navigateToGmail"/>
+          <include name="navigateToGoogleImages"/>
+        </methods>
+      </class> <!-- com.cync.AdminTS.Googletestcases -->
+    </classes>
+  </test> <!-- Cync Test Suite -->
+  <test name="Cync Test Suite(failed)" parallel="classes">
+    <parameter name="selGrid" value="false"/>
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="nodeURL" value="false"/>
+    <parameter name="url" value="https://www.google.com/"/>
+    <parameter name="localBrowserPath" value="chromedriver.exe"/>
+    <classes>
+      <class name="com.cync.AdminTS.Googletestcases">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="navigateToGoogleTextBox"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.cync.AdminTS.Googletestcases -->
+    </classes>
+  </test> <!-- Cync Test Suite(failed) -->
+</suite> <!-- Failed suite [Parallel Test] -->
